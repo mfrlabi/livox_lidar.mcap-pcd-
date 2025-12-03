@@ -35,7 +35,7 @@ After run (	ros2 launch livox_ros_driver2 msg_MID360_launch.py )  in the Termina
 
 3. to visualize point cloud data  - in directory:    labi@lb:~/ws_livox$  
            
-					 ros2 launch livox_ros_driver2 rviz_MID360_launch.py 
+					  ros2 launch livox_ros_driver2 rviz_MID360_launch.py 
 
 note: do not run 2 and 3 together  (only to visualize lidar data, never run when you run msg_MID360_launch.py to save pcd and other data)
 
@@ -44,7 +44,7 @@ note: do not run 2 and 3 together  (only to visualize lidar data, never run when
 
 4. to check ros topic list in labi@lb:~/ws_livox$   ( optional )
    
-                    ros2 topic list
+                     ros2 topic list
 
    
 				 
@@ -59,51 +59,51 @@ labi@lb:~/ws_livox$
 5. 2nd Terminal ---- to check whether /livox/lidar is publishing data or not - in directory:    labi@lb:~/ws_livox$  (it not mendatory)
 
  
-                ros2 topic echo /livox/lidar 
+                   ros2 topic echo /livox/lidar 
 
 
 
 6. 3rd Terminal ---- to record ros bag file in .mcap format  - in directory:   labi@lb:~/ws_livox$   (for ubuntu 24 )
          
   
-              ros2 bag record /livox/lidar
+                   ros2 bag record /livox/lidar
 
 				 
 
 Record for exactly 30 seconds:
 
 
-             timeout 30s ros2 bag record /livox/lidar
+                  timeout 30s ros2 bag record /livox/lidar
 
 
 
 For multiple topics:
 
-             timeout 30s ros2 bag record /livox/lidar /livox/imu
+                  timeout 30s ros2 bag record /livox/lidar /livox/imu
 		 
 
 To avoid the warning "terminating with signal":
 
   
-             timeout --signal=SIGINT 30s ros2 bag record /livox/lidar
+                 timeout --signal=SIGINT 30s ros2 bag record /livox/lidar
 
 
 
 6. Run the PCD saver node to save point cloud data in .pcd format
 
-             ros2 run pcd_saver pcd_saver_custommsg
+                  ros2 run pcd_saver pcd_saver_custommsg
 
 
 		
 ***-----------------------------------------------------------------------***
 - Create the directory for the script
   
-               mkdir -p ~/ws_livox/src/pcd_saver/pcd_saver
+                 mkdir -p ~/ws_livox/src/pcd_saver/pcd_saver
 
 Now copy the file:     (or to customize or modify  pcd saver) 
 
 
-             nano ~/ws_livox/src/pcd_saver/pcd_saver/pcd_saver_custommsg.py
+                nano ~/ws_livox/src/pcd_saver/pcd_saver/pcd_saver_custommsg.py
 
 			 		
 Save (Ctrl+S), exit (Ctrl+X)
@@ -113,7 +113,7 @@ Save (Ctrl+S), exit (Ctrl+X)
 
  make sure: Modify setup.py so ROS2 can run your script
 
-            nano ~/ws_livox/src/pcd_saver/setup.py
+               nano ~/ws_livox/src/pcd_saver/setup.py
 
 
 			
@@ -140,9 +140,15 @@ Replace entry_points with this:
 
 
 
-cd ~/ws_livox
-colcon build
-source install/setup.bash
+cd ~/ws_livox 
+
+
+            colcon build
+
+
+            source install/setup.bash
+
+
 
 ***Run the PCD saver node
 
