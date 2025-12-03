@@ -11,15 +11,18 @@
 
 IPv4 > manual 
              
-						 address: 192.168.1.5
+			 address: 192.168.1.5
              gateway: 192.168.1.200
 						 
 	
 
             source /opt/ros/jazzy/setup.bash 
+			source install/setup.bash 
 
+source install/setup.bash in directory: labi@lb:~/ws_livox$ 
 labi@lb:~/ws_livox$  source install/setup.bash 
 
+           
 
 
 2. to collect msg_custom messages in labi@lb:~/ws_livox$ 
