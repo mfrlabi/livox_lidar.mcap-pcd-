@@ -19,8 +19,8 @@ IPv4 > manual
             source /opt/ros/jazzy/setup.bash 
 			source install/setup.bash 
 
-source install/setup.bash in directory: labi@lb:~/ws_livox$ 
-labi@lb:~/ws_livox$  source install/setup.bash 
+source install/setup.bash in directory:   labi@lb:~/ws_livox$  source install/setup.bash 
+
 
            
 
