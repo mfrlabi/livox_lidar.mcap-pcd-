@@ -6,6 +6,7 @@ Livox ros_diver2 ( using Livox Mid360 lidar to run in the rviz and save data )
   and save point cloud data in .pcd format
 
 
+
 1. 
 
 *** to connect your pc with Livox Mid360 lidar via Ethernet:   ( Change the IP address according to your device )
