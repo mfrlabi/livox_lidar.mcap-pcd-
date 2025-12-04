@@ -2,12 +2,12 @@
 
 
 
-1. Livox ros_diver2 ( using Livox Mid360 lidar to run in rviz and save data )
+1. Livox ros_diver2 ( using Livox Mid360 lidar to run in the rviz and save data )
   -The published point cloud topic /livox/lidar is in the format livox_ros_driver/CustomMsg 
   and save point cloud data in .pcd format
 
 
-*** connect your pc with Livox Mid360 lidar via ethernet:   ( Change the IP address according to your device )
+*** to connect your pc with Livox Mid360 lidar via Ethernet:   ( Change the IP address according to your device )
 
 IPv4 > manual 
              
@@ -30,7 +30,7 @@ source install/setup.bash   - in directory:   labi@lb:~/ws_livox$  source instal
           
 						ros2 launch livox_ros_driver2 msg_MID360_launch.py 
 
-After run (	ros2 launch livox_ros_driver2 msg_MID360_launch.py )  in the Terminal keep it unchange		
+After running (	ros2 launch livox_ros_driver2 msg_MID360_launch.py )  in the Terminal keep it unchanged 		
 
 
 
@@ -38,7 +38,7 @@ After run (	ros2 launch livox_ros_driver2 msg_MID360_launch.py )  in the Termina
            
 					  ros2 launch livox_ros_driver2 rviz_MID360_launch.py 
 
-note: do not run 2 and 3 together  (only to visualize lidar data, never run when you run msg_MID360_launch.py to save pcd and other data)
+Note: do not run 2 and 3 together  (only to visualize lidar data, never run when you run msg_MID360_launch.py to save pcd and other data)
 
 
 
@@ -57,7 +57,7 @@ labi@lb:~/ws_livox$
 
 
 
-5. 2nd Terminal ---- to check whether /livox/lidar is publishing data or not - in directory:    labi@lb:~/ws_livox$  (it not mendatory)
+5. 2nd Terminal ---- to check whether /livox/lidar is publishing data or not - in directory:    labi@lb:~/ws_livox$  ( not mandatory )
 
  
                    ros2 topic echo /livox/lidar 
@@ -156,5 +156,11 @@ cd ~/ws_livox
             ros2 run pcd_saver pcd_saver_custommsg
 
 ***--------------------------------------------------------------------------------------------------***
+
+
+
+
+
+
 
 
