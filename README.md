@@ -1,4 +1,4 @@
-# livox_lidar .mcap & .pcd
+# livox_Mid360 .mcap & .pcd
 
 
 
