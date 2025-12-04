@@ -1,13 +1,13 @@
-# livox_lidar.mcap-pcd-
+# livox_lidar .mcap & .pcd
 
 
 
-1. Livox ros_diver2 ( using Livox Mid360 lidar to run in rviz and save data in)
+1. Livox ros_diver2 ( using Livox Mid360 lidar to run in rviz and save data )
   -The published point cloud topic /livox/lidar is in the format livox_ros_driver/CustomMsg 
   and save point cloud data in .pcd format
 
 
-*** connect your pc with Livox Mid360 lidar via ethernet:
+*** connect your pc with Livox Mid360 lidar via ethernet:   ( Change the IP address according to your device )
 
 IPv4 > manual 
              
@@ -18,6 +18,7 @@ IPv4 > manual
 
             source /opt/ros/jazzy/setup.bash 
 			source install/setup.bash 
+			
 
 source install/setup.bash   - in directory:   labi@lb:~/ws_livox$  source install/setup.bash 
 
