@@ -167,20 +167,25 @@ cd ~/ws_livox
 
 Rebuild your package: (if you haven't build your icp package yet)
 
-cd ~/ws_livox
-colcon build --symlink-install --packages-select icp_pcd
+   cd ~/ws_livox
+   colcon build --symlink-install --packages-select icp_pcd
+
+or
+
+
+   colcon build --symlink-install --packages-select icp_pcd --cmake-clean-cache
 
 
 
 Source the workspace:
 
-source install/setup.bash
+   source install/setup.bash
 
 
 
 Verify:
 
-ls ~/ws_livox/install/icp_pcd/lib/icp_pcd/
+   ls ~/ws_livox/install/icp_pcd/lib/icp_pcd/
 
 
 
@@ -191,9 +196,13 @@ hybrid_icp_pcd_vis
 
 
 
-Run the visualizer:
+Run the visualizer:    ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_output/transforms.txt 0.1
 
-ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_output/transforms.txt 0.1
+   ros2 run icp_pcd icp_pcd
+
+
+   ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_output/transforms.txt 0.1
+
 
 
 
