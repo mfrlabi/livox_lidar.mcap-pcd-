@@ -199,7 +199,7 @@ Run the visualizer:    ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_ou
     ros2 run icp_pcd icp_pcd
 
 
-    ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_output/transforms.txt 0.1
+ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_output/transforms.txt 0.1
 
 
 
