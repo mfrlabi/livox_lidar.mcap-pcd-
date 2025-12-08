@@ -30,7 +30,7 @@ source install/setup.bash   - in directory:   labi@lb:~/ws_livox$  source instal
 
 2. to collect msg_custom messages   - in directory:      labi@lb:~/ws_livox$ 
           
-    ros2 launch livox_ros_driver2 msg_MID360_launch.py 
+     ros2 launch livox_ros_driver2 msg_MID360_launch.py 
 
 After running (	ros2 launch livox_ros_driver2 msg_MID360_launch.py )  in the Terminal keep it unchanged 		
 
@@ -38,7 +38,7 @@ After running (	ros2 launch livox_ros_driver2 msg_MID360_launch.py )  in the Ter
 
 3. to visualize point cloud data  - in directory:    labi@lb:~/ws_livox$  
            
-    ros2 launch livox_ros_driver2 rviz_MID360_launch.py 
+     ros2 launch livox_ros_driver2 rviz_MID360_launch.py 
 
 Note: do not run 2 and 3 together  (only to visualize lidar data, never run when you run msg_MID360_launch.py to save pcd and other data)
 
@@ -47,7 +47,7 @@ Note: do not run 2 and 3 together  (only to visualize lidar data, never run when
 
 4. to check ros topic list in labi@lb:~/ws_livox$   ( optional )
    
-    ros2 topic list
+     ros2 topic list
 
    
 				 
@@ -62,37 +62,37 @@ labi@lb:~/ws_livox$
 5. 2nd Terminal ---- to check whether /livox/lidar is publishing data or not - in directory:    labi@lb:~/ws_livox$  ( not mandatory )
 
  
-    ros2 topic echo /livox/lidar 
+     ros2 topic echo /livox/lidar 
 
 
 6. 3rd Terminal ---- to record ros bag file in .mcap format  - in directory:   labi@lb:~/ws_livox$   (for ubuntu 24 )
          
   
-    ros2 bag record /livox/lidar
+     ros2 bag record /livox/lidar
 
 				 
 
 Record for exactly 30 seconds:
 
 
-    timeout 30s ros2 bag record /livox/lidar
+     timeout 30s ros2 bag record /livox/lidar
 
 
 For multiple topics:
 
-    timeout 30s ros2 bag record /livox/lidar /livox/imu
+     timeout 30s ros2 bag record /livox/lidar /livox/imu
 		 
 
 To avoid the warning "terminating with signal":
 
   
-    timeout --signal=SIGINT 30s ros2 bag record /livox/lidar
+     timeout --signal=SIGINT 30s ros2 bag record /livox/lidar
 
 
 
 6. Run the PCD saver node to save point cloud data in .pcd format
 
-    ros2 run pcd_saver pcd_saver_custommsg
+     ros2 run pcd_saver pcd_saver_custommsg
 
 
 		
