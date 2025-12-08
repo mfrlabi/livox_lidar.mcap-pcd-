@@ -28,8 +28,9 @@ source install/setup.bash   - in directory:   labi@lb:~/ws_livox$  source instal
            
 
 
-2. to collect msg_custom messages   - in directory:      labi@lb:~/ws_livox$ 
-          
+2.
+to collect msg_custom messages   - in directory:      labi@lb:~/ws_livox$ 
+
       ros2 launch livox_ros_driver2 msg_MID360_launch.py 
 
 After running (	ros2 launch livox_ros_driver2 msg_MID360_launch.py )  in the Terminal keep it unchanged 		
