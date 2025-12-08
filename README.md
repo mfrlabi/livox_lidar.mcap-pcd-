@@ -1,4 +1,4 @@
-# livox_Mid360 .mcap & .pcd & icp
+  # livox_Mid360 .mcap & .pcd & icp
 
 
 Livox ros_diver2 ( using Livox Mid360 lidar to run in the rviz and save data )
@@ -30,7 +30,7 @@ source install/setup.bash   - in directory:   labi@lb:~/ws_livox$  source instal
 
 2. to collect msg_custom messages   - in directory:      labi@lb:~/ws_livox$ 
           
-     ros2 launch livox_ros_driver2 msg_MID360_launch.py 
+      ros2 launch livox_ros_driver2 msg_MID360_launch.py 
 
 After running (	ros2 launch livox_ros_driver2 msg_MID360_launch.py )  in the Terminal keep it unchanged 		
 
@@ -38,7 +38,7 @@ After running (	ros2 launch livox_ros_driver2 msg_MID360_launch.py )  in the Ter
 
 3. to visualize point cloud data  - in directory:    labi@lb:~/ws_livox$  
            
-     ros2 launch livox_ros_driver2 rviz_MID360_launch.py 
+      ros2 launch livox_ros_driver2 rviz_MID360_launch.py 
 
 Note: do not run 2 and 3 together  (only to visualize lidar data, never run when you run msg_MID360_launch.py to save pcd and other data)
 
