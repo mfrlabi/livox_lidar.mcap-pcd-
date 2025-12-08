@@ -88,7 +88,7 @@ For multiple topics:
 To avoid the warning "terminating with signal":
 
   
-                 timeout --signal=SIGINT 30s ros2 bag record /livox/lidar
+                  timeout --signal=SIGINT 30s ros2 bag record /livox/lidar
 
 
 
@@ -101,12 +101,12 @@ To avoid the warning "terminating with signal":
 ***-----------------------------------------------------------------------***
 - Create the directory for the script
   
-                 mkdir -p ~/ws_livox/src/pcd_saver/pcd_saver
+                  mkdir -p ~/ws_livox/src/pcd_saver/pcd_saver
 
 Now copy the file:     (or to customize or modify  pcd saver) 
 
 
-                nano ~/ws_livox/src/pcd_saver/pcd_saver/pcd_saver_custommsg.py
+                  nano ~/ws_livox/src/pcd_saver/pcd_saver/pcd_saver_custommsg.py
 
 			 		
 Save (Ctrl+S), exit (Ctrl+X)
@@ -116,7 +116,7 @@ Save (Ctrl+S), exit (Ctrl+X)
 
  make sure: Modify setup.py so ROS2 can run your script
 
-               nano ~/ws_livox/src/pcd_saver/setup.py
+                nano ~/ws_livox/src/pcd_saver/setup.py
 
 
 			
@@ -155,7 +155,7 @@ cd ~/ws_livox
 
 ***Run the PCD saver node
 
-            ros2 run pcd_saver pcd_saver_custommsg
+        ros2 run pcd_saver pcd_saver_custommsg
 
 ***--------------------------------------------------------------------------------------------------***
 
@@ -163,29 +163,27 @@ cd ~/ws_livox
 7. icp 
 
 
-
-
 Rebuild your package: (if you haven't build your icp package yet)
 
-   cd ~/ws_livox
-   colcon build --symlink-install --packages-select icp_pcd
+        cd ~/ws_livox
+        colcon build --symlink-install --packages-select icp_pcd
 
 or
 
 
-   colcon build --symlink-install --packages-select icp_pcd --cmake-clean-cache
+        colcon build --symlink-install --packages-select icp_pcd --cmake-clean-cache
 
 
 
 Source the workspace:
 
-   source install/setup.bash
+        source install/setup.bash
 
 
 
 Verify:
 
-   ls ~/ws_livox/install/icp_pcd/lib/icp_pcd/
+        ls ~/ws_livox/install/icp_pcd/lib/icp_pcd/
 
 
 
@@ -198,10 +196,10 @@ hybrid_icp_pcd_vis
 
 Run the visualizer:    ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_output/transforms.txt 0.1
 
-   ros2 run icp_pcd icp_pcd
+    ros2 run icp_pcd icp_pcd
 
 
-   ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_output/transforms.txt 0.1
+    ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_output/transforms.txt 0.1
 
 
 
