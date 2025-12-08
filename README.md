@@ -186,7 +186,7 @@ Verify:
 
 You should now see both:
 
-icp_pcd
+icp_pcd        
 hybrid_icp_pcd_vis
 
 
