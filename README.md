@@ -1,4 +1,4 @@
-# livox_Mid360 .mcap & .pcd
+# livox_Mid360 .mcap & .pcd & icp
 
 
 Livox ros_diver2 ( using Livox Mid360 lidar to run in the rviz and save data )
@@ -160,7 +160,40 @@ cd ~/ws_livox
 ***--------------------------------------------------------------------------------------------------***
 
 
+7. icp 
 
+
+
+
+Rebuild your package: (if you haven't build your icp package yet)
+
+cd ~/ws_livox
+colcon build --symlink-install --packages-select icp_pcd
+
+
+
+Source the workspace:
+
+source install/setup.bash
+
+
+
+Verify:
+
+ls ~/ws_livox/install/icp_pcd/lib/icp_pcd/
+
+
+
+You should now see both:
+
+icp_pcd
+hybrid_icp_pcd_vis
+
+
+
+Run the visualizer:
+
+ros2 run icp_pcd hybrid_icp_pcd_vis ~/pcd_output ~/pcd_output/transforms.txt 0.1
 
 
 
