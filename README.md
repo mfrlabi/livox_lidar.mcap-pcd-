@@ -78,7 +78,6 @@ Record for exactly 30 seconds:
     timeout 30s ros2 bag record /livox/lidar
 
 
-
 For multiple topics:
 
     timeout 30s ros2 bag record /livox/lidar /livox/imu
