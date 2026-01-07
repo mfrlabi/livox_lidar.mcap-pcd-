@@ -1,4 +1,4 @@
-  # livox_Mid360 mcap-pcd-icp
+  # L_Mid360 mcap-pcd-icp
 
 
 Livox ros_diver2 ( using Livox Mid360 lidar to run in the rviz and save data )
